@@ -15,7 +15,8 @@ import AdbIcon from '@mui/icons-material/Adb';
 import LogoFESW from '../assets/fesw-logo.png';
 
 const pages = ['Proyectos', 'Versiones Anteriores', 'Categorías'];
-const settings = ['Editar Perfil', 'Editar Stand'];
+const settingsAlumno = ['Editar Perfil', 'Editar Stand'];
+const settingsProfesor = ['Editar Perfil'];
 
 function ResponsiveAppBar(id) {
   let logged = false;
@@ -120,45 +121,70 @@ function ResponsiveAppBar(id) {
           return <Button onClick={() => handleLogin()} color="inherit" href="/login" >
           Iniciar Sesión
         </Button>;
+        } else if (id.id == 2) {
+          return <Tooltip title="Opciones">
+          <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
+            <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
+          </IconButton>
+        </Tooltip>;
         } else {
-          return <Tooltip title="Open settings">
+          return <Tooltip title="Opciones">
           <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
             <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
           </IconButton>
         </Tooltip>;
         }
       })()}
-            {/* {!logged && <Button onClick={() => handleLogin()} color="inherit" >
-              Iniciar Sesión
-            </Button>}
-            {logged && <Tooltip title="Open settings">
-              <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
-              </IconButton>
-            </Tooltip> } */}
             </div>
-            <Menu
-              sx={{ mt: '45px' }}
-              id="menu-appbar"
-              anchorEl={anchorElUser}
-              anchorOrigin={{
-                vertical: 'top',
-                horizontal: 'right',
-              }}
-              keepMounted
-              transformOrigin={{
-                vertical: 'top',
-                horizontal: 'right',
-              }}
-              open={Boolean(anchorElUser)}
-              onClose={handleCloseUserMenu}
-            >
-              {settings.map((setting) => (
-                <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                  <Typography textAlign="center">{setting}</Typography>
-                </MenuItem>
-              ))}
-            </Menu>
+            {(() => {
+        if (id.id == 2) {
+          return <Menu
+          sx={{ mt: '45px' }}
+          id="menu-appbar"
+          anchorEl={anchorElUser}
+          anchorOrigin={{
+            vertical: 'top',
+            horizontal: 'right',
+          }}
+          keepMounted
+          transformOrigin={{
+            vertical: 'top',
+            horizontal: 'right',
+          }}
+          open={Boolean(anchorElUser)}
+          onClose={handleCloseUserMenu}
+        >
+          {settingsAlumno.map((setting) => (
+            <MenuItem key={setting} onClick={handleCloseUserMenu}>
+              <Typography textAlign="center">{setting}</Typography>
+            </MenuItem>
+          ))}
+        </Menu>
+       } else {
+          return <Menu
+          sx={{ mt: '45px' }}
+          id="menu-appbar"
+          anchorEl={anchorElUser}
+          anchorOrigin={{
+            vertical: 'top',
+            horizontal: 'right',
+          }}
+          keepMounted
+          transformOrigin={{
+            vertical: 'top',
+            horizontal: 'right',
+          }}
+          open={Boolean(anchorElUser)}
+          onClose={handleCloseUserMenu}
+        >
+          {settingsProfesor.map((setting) => (
+            <MenuItem key={setting} onClick={handleCloseUserMenu}>
+              <Typography textAlign="center">{setting}</Typography>
+            </MenuItem>
+          ))}
+        </Menu>
+        }
+      })()}
           </Box>
         </Toolbar>
       </Container>
