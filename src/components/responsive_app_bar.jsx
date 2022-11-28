@@ -15,8 +15,8 @@ import AdbIcon from '@mui/icons-material/Adb';
 import LogoFESW from '../assets/fesw-logo.png';
 
 const pages = ['Proyectos', 'Versiones Anteriores', 'Categorías'];
-const settingsAlumno = ['Editar Perfil', 'Editar Stand'];
-const settingsProfesor = ['Editar Perfil'];
+const settingsAlumno = ['Editar Perfil', 'Editar Stand', 'Cerrar Sesión'];
+const settingsProfesor = ['Editar Perfil', 'Cerrar Sesión'];
 
 function ResponsiveAppBar(id) {
   let logged = false;

@@ -6,7 +6,7 @@ import CardMedia from '@mui/material/CardMedia';
 import CardContent from '@mui/material/CardContent';
 import CardActions from '@mui/material/CardActions';
 import Collapse from '@mui/material/Collapse';
-import Avatar from '@mui/material/Avatar';
+import { Button } from '@mui/material';
 import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
@@ -28,7 +28,7 @@ export default function TeamCard({title, image, description}) {
       <CardHeader
         align="center"
         title={title}
-        subheader="September 14, 2016"
+        subheader="Campus SJ"
         fontSize="20px"
       />
       <CardMedia
@@ -43,12 +43,9 @@ export default function TeamCard({title, image, description}) {
         </Typography>
       </CardContent>
       <CardActions disableSpacing>
-        <IconButton aria-label="add to favorites">
-          <FavoriteIcon />
-        </IconButton>
-        <IconButton aria-label="share">
-          <ShareIcon />
-        </IconButton>
+        <Button  variant='contained' aria-label="Visitar">
+          VISITAR
+        </Button>
       </CardActions>
     </Card>
     </ThemeProvider>
