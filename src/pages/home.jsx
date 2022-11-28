@@ -5,6 +5,8 @@ import TeamCard from '../components/team-card';
 import Stack from '@mui/material/Stack';
 
 export const HomePage = () => {
+  const greeting = 'Hello World';
+  const goodbye = 'Goodbye World';
   return (
     <div className='navbar'>
       {/* <Box sx={{ flexGrow: 1 }}>
@@ -35,6 +37,12 @@ export const HomePage = () => {
     </div>
     <div className='team'>
     <Stack spacing={2} direction='row'  alignItems="center">
+      <TeamCard dataFromParent = {greeting}/>
+      <TeamCard dataFromParent = {goodbye}/>
+      <TeamCard dataFromParent = {greeting}/>
+      <TeamCard dataFromParent = {goodbye}/>
+    </Stack>
+    {/* <Stack spacing={2} direction='row'  alignItems="center">
       <TeamCard />
       <TeamCard />
       <TeamCard />
@@ -45,13 +53,7 @@ export const HomePage = () => {
       <TeamCard />
       <TeamCard />
       <TeamCard />
-    </Stack>
-    <Stack spacing={2} direction='row'  alignItems="center">
-      <TeamCard />
-      <TeamCard />
-      <TeamCard />
-      <TeamCard />
-    </Stack>
+    </Stack> */}
       </div>  
     </div>
   )
