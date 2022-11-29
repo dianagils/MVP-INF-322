@@ -22,7 +22,9 @@ export const StandEdit = () => {
     <div className='navbar'>
     <ResponsiveAppBar id={1}/>
   <div className="Proyectos" alignItems="center">
-      <h1 className='page__title' style={{textAlign: "center"}}>BINMO</h1>
+  <div className="my-text">
+                <EditText style={{textAlign: "center"}} showEditButton defaultValue="Ingresa un título" />
+                </div>
       </div>
       <div className="row mt-5">
         <Stack direction="row">
@@ -65,3 +67,4 @@ export const StandEdit = () => {
 
     
 export default StandEdit
+
