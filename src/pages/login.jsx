@@ -15,7 +15,7 @@ export const LogIn = () => {
       <div className="login">
       <Stack spacing={2}  direction='column'  alignItems="center">
       <Button variant='contained' href='/2'>ALUMNO</Button>
-      <Button variant='contained' href='/3'>PROFESOR</Button>
+      <Button variant='contained' href='/profesor'>PROFESOR</Button>
       </Stack>
       </div>
     </div>
