@@ -2,7 +2,6 @@ import React from 'react'
 import { useParams, userLocalStore} from "react-router-dom";
 import LogoUSM from '../assets/usm.png'
 import Binmo from '../assets/binmo.jpg';
-import './estilos.css';
 import PERFIL from '../assets/perfil.png';
 import MisionVIsion from '../components/mision_vision';
 
