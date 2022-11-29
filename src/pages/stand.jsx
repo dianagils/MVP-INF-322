@@ -3,7 +3,6 @@ import { useParams, userLocalStore} from "react-router-dom";
 import LogoUSM from '../assets/usm.png'
 import Binmo from '../assets/binmo.jpg';
 import PERFIL from '../assets/perfil.png';
-import './estilos.css';
 import MisionVIsion from '../components/mision_vision';
 import Stack from '@mui/material/Stack';
 import { Button } from '@mui/material';
