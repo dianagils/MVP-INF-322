@@ -16,7 +16,6 @@ import DACOT from '../assets/dacot.jpg';
 import EMPATY from '../assets/empaty.jpg';
 import PUDUPAL from '../assets/pudupal.jpg';
 import VINCULADOS from '../assets/vinculados.jpg';
-import CheckboxList from '../components/checklist';
 import PersistentDrawerRight from '../components/drawer';
 
 export const HomePage = () => {

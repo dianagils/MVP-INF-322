@@ -17,10 +17,11 @@ import ShareIcon from '@mui/icons-material/Share';
 
 export default function TeamCard({title, image, description}) {
   const theme = createTheme({
-    typography: {
+    typography:  {
       fontFamily: ["Anek Devanagari", "sans-serif"].join(","),
       fontSize: 20,
-    },
+      fontWeight: 500
+    }
   });
   return (
     <ThemeProvider theme={theme}>
@@ -38,7 +39,7 @@ export default function TeamCard({title, image, description}) {
         alt="PreuAPP"
       />
       <CardContent>
-        <Typography variant="body2" color="text.secondary">
+        <Typography variant="body" color="text.bold" fontWeight="bolder">
           {description}
         </Typography>
       </CardContent>
