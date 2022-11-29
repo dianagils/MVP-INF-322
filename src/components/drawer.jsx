@@ -75,7 +75,8 @@ export default function PersistentDrawerRight() {
 
   return (
     <Box sx={{ display: 'flex' }}>
-     <IconButton
+            <div className="eval-button" >
+     <IconButton 
             color="inherit"
             aria-label="Checklist Evaluación"
             edge="end"
@@ -84,6 +85,7 @@ export default function PersistentDrawerRight() {
           >
             <AssignmentIcon />
           </IconButton>
+          </div>
       <Main open={open}>
         <DrawerHeader/>
       </Main>

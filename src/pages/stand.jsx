@@ -13,20 +13,24 @@ import PersistentDrawerRight from '../components/drawer';
 import IntegrantesCard from '../components/integrantes-card';
 
 export const Stands = () => {
-
+  const { id } = useParams();
   return (
     <div className='navbar'>
-      <ResponsiveAppBar id={1}/>
+      <ResponsiveAppBar id={id}/>
+      {(() => {
+        if (id.id == 2) {
+          return  <div className="eval-button" >
+          <Button variant='contained' href="/stand-edit" >Editar Proyecto</Button>
+        </div>
+        }
+      })()}
       <div className="Proyectos" alignItems="center">
         <h1 className='page__title' style={{textAlign: "center"}}>BINMO</h1>
-      </div>
-      <div className="row mt-5" >
-        <Button variant='contained' href="/stand-edit" >Editar Proyecto</Button>
       </div>
       <div className="row mt-5">
         <Stack direction="row">
             <img src={Binmo} height={300} alt="proyext image" />
-              <span className='my-text' style={{fontSize: '20px', fontWeight: 'bold', color: 'blue'}} > 
+              <span className='my-text' style={{fontSize: '20px', fontWeight: 'bold', color: 'blue', padding: '20px', textAlign: 'center'}} > 
               BINMO es un sistema de detección temprana de bullying mediante 
               análisis de video en tiempo real para instituciones educacionales, 
               involucrando a la comunidad escolar con reportes anónimos, recursos 
@@ -52,15 +56,15 @@ export const Stands = () => {
           <div className='row'>
         <Stack  spacing={4}  direction='row' justifyContent={"space-arround"}>
         <div className="subrender"> </div>
-          <IntegrantesCard title = "Integrante 1" image = {PERFIL} subheader="Scrum Master"/>
-          <IntegrantesCard title = "Integrante 2" image = {PERFIL} subheader="Backend Developer"/>
-          <IntegrantesCard title = "Integrante 3" image = {PERFIL} subheader="Frontend Developer"/>
+          <IntegrantesCard title = "Gabriela Acuña" image = {PERFIL} subheader="Scrum Master" link="https://www.linkedin.com/in/gabriela-acu%C3%B1a-385129219/"/>
+          <IntegrantesCard title = "Tomas Morales" image = {PERFIL} subheader="Backend Developer" link="https://www.linkedin.com/in/tom%C3%A1s-morales-9180b9220/"/>
+          <IntegrantesCard title = "Vania Gallardo" image = {PERFIL} subheader="Frontend Developer" link="https://www.linkedin.com/in/vania-gallardo-5b8754165/"/>
         </Stack>
         </div>
         <div className='row'>
         <Stack spacing={2} direction='row'  alignItems="center">
-          <IntegrantesCard title = "Integrante 4" image = {PERFIL} subheader="Product Owner"/>
-          <IntegrantesCard title = "Integrante 5" image = {PERFIL} subheader="IA developer"/>
+          <IntegrantesCard title = "Diana Gil" image = {PERFIL} subheader="Product Owner" link="https://www.linkedin.com/in/diana-gil-silvestre-5b024b216/"/>
+          <IntegrantesCard title = "Dylan Oteíza" image = {PERFIL} subheader="IA developer" link="https://www.linkedin.com/in/dylan-ote%C3%ADza-canales-64bb69223/"/>
         </Stack>
         </div>
         </div>

@@ -15,7 +15,7 @@ import FavoriteIcon from '@mui/icons-material/Favorite';
 import ShareIcon from '@mui/icons-material/Share';
 
 
-export default function TeamCard({title, image, description}) {
+export default function TeamCard({title, image, description, id}) {
   const theme = createTheme({
     typography:  {
       fontFamily: ["Anek Devanagari", "sans-serif"].join(","),
@@ -44,7 +44,7 @@ export default function TeamCard({title, image, description}) {
         </Typography>
       </CardContent>
       <CardActions disableSpacing>
-        <Button  variant='contained' aria-label="Visitar" href="/stand">
+        <Button  variant='contained' aria-label="Visitar" href={"/stand/" + id}>
           VISITAR
         </Button>
       </CardActions>

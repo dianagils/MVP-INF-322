@@ -10,12 +10,11 @@ import { Button } from '@mui/material';
 import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-import { red } from '@mui/material/colors';
-import FavoriteIcon from '@mui/icons-material/Favorite';
-import ShareIcon from '@mui/icons-material/Share';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
 
 
-export default function IntegrantesCard({title, image, subheader}) {
+
+export default function IntegrantesCard({title, image, subheader, link}) {
   const theme = createTheme({
     typography:  {
       fontFamily: ["Anek Devanagari", "sans-serif"].join(","),
@@ -41,9 +40,9 @@ export default function IntegrantesCard({title, image, subheader}) {
       <CardContent>
       </CardContent>
       <CardActions disableSpacing>
-        <Button  variant='contained' aria-label="Visitar" href="https://www.linkedin.com">
-          LinkedIn
-        </Button>
+        <IconButton>
+          <LinkedInIcon href={link}></LinkedInIcon>
+          </IconButton>
       </CardActions>
     </Card>
     </ThemeProvider>

@@ -46,21 +46,22 @@ export const StandEdit = () => {
         </Stack>
   
         <h1 className='page__title' style={{textAlign: "center"}}>Conoce a nuestros integrantes</h1>
-          <div className='team'>
-            <div className='row'>
-          <Stack spacing={2}  direction='row'  alignItems="center">
-            <IntegrantesCard title = "Integrante 1" image = {PERFIL} subheader="Scrum Master"/>
-            <IntegrantesCard title = "Integrante 2" image = {PERFIL} subheader="Backend Developer"/>
-            <IntegrantesCard title = "Integrante 3" image = {PERFIL} subheader="Frontend Developer"/>
-          </Stack>
-          </div>
+        <div className='team'>
           <div className='row'>
-          <Stack spacing={2} direction='row'  alignItems="center">
-            <IntegrantesCard title = "Integrante 4" image = {PERFIL} subheader="Product Owner"/>
-            <IntegrantesCard title = "Integrante 5" image = {PERFIL} subheader="IA developer"/>
-          </Stack>
-          </div>
-          </div>
+        <Stack  spacing={4}  direction='row' justifyContent={"space-arround"}>
+        <div className="subrender"> </div>
+          <IntegrantesCard title = "Gabriela Acuña" image = {PERFIL} subheader="Scrum Master" link="https://www.linkedin.com/in/gabriela-acu%C3%B1a-385129219/"/>
+          <IntegrantesCard title = "Tomas Morales" image = {PERFIL} subheader="Backend Developer" link="https://www.linkedin.com/in/tom%C3%A1s-morales-9180b9220/"/>
+          <IntegrantesCard title = "Vania Gallardo" image = {PERFIL} subheader="Frontend Developer" link="https://www.linkedin.com/in/vania-gallardo-5b8754165/"/>
+        </Stack>
+        </div>
+        <div className='row'>
+        <Stack spacing={2} direction='row'  alignItems="center">
+          <IntegrantesCard title = "Diana Gil" image = {PERFIL} subheader="Product Owner" link="https://www.linkedin.com/in/diana-gil-silvestre-5b024b216/"/>
+          <IntegrantesCard title = "Dylan Oteíza" image = {PERFIL} subheader="IA developer" link="https://www.linkedin.com/in/dylan-ote%C3%ADza-canales-64bb69223/"/>
+        </Stack>
+        </div>
+        </div>
     </div>
   )
 }
