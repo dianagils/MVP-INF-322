@@ -2,15 +2,16 @@ import React from 'react'
 import { useParams, userLocalStore} from "react-router-dom";
 import LogoUSM from '../assets/usm.png'
 import Binmo from '../assets/binmo.jpg';
+import PERFIL from '../assets/perfil.png';
 import './estilos.css';
 import MisionVIsion from '../components/mision_vision';
-
 import Stack from '@mui/material/Stack';
 import { Button } from '@mui/material';
 import ResponsiveAppBar from '../components/responsive_app_bar';
 import { EditText, EditTextarea } from 'react-edit-text';
 import 'react-edit-text/dist/index.css';
 import PersistentDrawerRight from '../components/drawer';
+import IntegrantesCard from '../components/integrantes-card';
 
 export const Stands = () => {
 
@@ -44,6 +45,23 @@ export const Stands = () => {
       <MisionVIsion title = "VISION" subheader="Nuestra Misión es entregar las mejores herramientas para contribuir
        al bienestar de los integrantes de la comunidad escolar."/>
       </Stack>
+
+      <h1 className='page__title' style={{textAlign: "center"}}>Conoce a nuestros integrantes</h1>
+        <div className='team'>
+          <div className='row'>
+        <Stack spacing={2}  direction='row'  alignItems="center">
+          <IntegrantesCard title = "Integrante 1" image = {PERFIL} subheader="Scrum Master"/>
+          <IntegrantesCard title = "Integrante 2" image = {PERFIL} subheader="Backend Developer"/>
+          <IntegrantesCard title = "Integrante 3" image = {PERFIL} subheader="Frontend Developer"/>
+        </Stack>
+        </div>
+        <div className='row'>
+        <Stack spacing={2} direction='row'  alignItems="center">
+          <IntegrantesCard title = "Integrante 4" image = {PERFIL} subheader="Product Owner"/>
+          <IntegrantesCard title = "Integrante 5" image = {PERFIL} subheader="IA developer"/>
+        </Stack>
+        </div>
+        </div>
     </div>
   )
 }
