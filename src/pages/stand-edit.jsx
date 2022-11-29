@@ -21,7 +21,6 @@ export const StandEdit = () => {
   return (
     <div className='navbar'>
     <ResponsiveAppBar id={1}/>
-    <PersistentDrawerRight/>
   <div className="Proyectos" alignItems="center">
       <h1 className='page__title' style={{textAlign: "center"}}>BINMO</h1>
       </div>
