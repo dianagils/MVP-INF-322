@@ -11,11 +11,19 @@ import { Button } from '@mui/material';
 
 
 
+import ResponsiveAppBar from '../components/responsive_app_bar';
+import Stack from '@mui/material/Stack';
+import { Button } from '@mui/material';
+import { EditText, EditTextarea } from 'react-edit-text';
+import 'react-edit-text/dist/index.css';
+import PersistentDrawerRight from '../components/drawer';
+
 export const Stands = () => {
-  const { id } = useParams();
+
   return (
     <div className='navbar'>
     <ResponsiveAppBar id={1}/>
+    <PersistentDrawerRight/>
   <div className="Proyectos" alignItems="center">
       <h1 className='page__title' style={{textAlign: "center"}}>BINMO</h1>
       </div>
@@ -31,21 +39,26 @@ export const Stands = () => {
                </span> 
              <span> HOLA </span> 
              <span> HOLA </span> 
+        <Stack direction="row">
+             <img src={Binmo} height={300} alt="proyext image" />
+             {/* <span className='my-text' style={{fontSize: '20px', fontWeight: 'bold', color: 'blue'}} > 
+                  This is a simple example of a Landing Page you can build using
+                Material Tailwind. It features multiple components based on the
+                Tailwind CSS and Material Design by Google.
+               </span>  */}
+                <div className="my-text">
+                <EditText showEditButton defaultValue="hOLA" />
+                </div>
+        </Stack>
         </div>
         <div className="my-text">
         <p style={{fontSize: '18px', fontWeight: 'bold', color: 'blue'}}>Hola Mundo!</p>
         </div>
     
+
     </div>
   )
 }
 
     
-
-
-
-
-
-
-
 export default Stands
