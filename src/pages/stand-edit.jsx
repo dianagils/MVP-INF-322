@@ -38,7 +38,9 @@ export const StandEdit = () => {
         <Stack padding={10} spacing={19} direction='row'  alignItems="center">
 
         <div className="subrender"> </div>
-        <MisionVIsion title = "MISION" />
+        <MisionVIsion title = "MISION" subheader="Nuestra Visión es generar cambios significativos en la 
+      salud mental y bienestar de los establecimientos educacionales del país, aportando y generando conciencia 
+      social a través del uso de tecnología e Inteligencia Artificial." />
         <MisionVIsion title = "VISION" subheader="Nuestra Misión es entregar las mejores herramientas para contribuir
          al bienestar de los integrantes de la comunidad escolar."/>
         </Stack>
