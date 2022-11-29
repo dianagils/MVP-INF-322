@@ -1,4 +1,6 @@
 import * as React from 'react';
+import {useCallback} from 'react';
+import {useNavigate} from 'react-router-dom';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
@@ -13,12 +15,14 @@ import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
 import LogoFESW from '../assets/fesw-logo.png';
+import { Link } from 'react-router-dom';
 
 const pages = ['Proyectos', 'Versiones Anteriores', 'Categorías'];
 const settingsAlumno = ['Editar Perfil', 'Editar Stand', 'Cerrar Sesión'];
 const settingsProfesor = ['Editar Perfil', 'Cerrar Sesión'];
 
 function ResponsiveAppBar(id) {
+  const navigate = useNavigate();
   let logged = false;
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
@@ -43,6 +47,12 @@ function ResponsiveAppBar(id) {
     console.log(logged);
   }
 
+  const handleEdit = (setting) => {
+    if (setting === 'Editar Stand') {
+      console.log('Editar Stand');
+      useCallback(() => navigate('/stand/2', {replace: true}), [navigate]);
+    }
+  }
   return (
     <AppBar position="static">
       <Container maxWidth="xl">
@@ -100,7 +110,9 @@ function ResponsiveAppBar(id) {
               padding: '0.5rem',
             }}
           >
+            <Link to={`/1`}>
             <img src={LogoFESW} height={100} alt='logo usm' /><br />
+            </Link>
           </Typography> 
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {pages.map((page) => (
@@ -155,7 +167,7 @@ function ResponsiveAppBar(id) {
           onClose={handleCloseUserMenu}
         >
           {settingsAlumno.map((setting) => (
-            <MenuItem key={setting} onClick={handleCloseUserMenu}>
+            <MenuItem key={setting} containerelement={<Link to="/stand-edit" />}>
               <Typography textAlign="center">{setting}</Typography>
             </MenuItem>
           ))}

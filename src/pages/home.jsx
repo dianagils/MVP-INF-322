@@ -24,7 +24,6 @@ export const HomePage = () => {
     <div className='navbar'>
     <ResponsiveAppBar id={id}/>
     <div className='page'>
-    <PersistentDrawerRight/>
       <h1 className='page__title'>Bienvenido a la Feria de Software Virtual 2023</h1>
       <h2>Revisa los proyectos de esta edición y visita sus stands virtuales</h2>
     </div>
@@ -32,29 +31,29 @@ export const HomePage = () => {
     <div className='team'>
       <div className='row'>
     <Stack spacing={2}  direction='row'  alignItems="center">
-      <TeamCard title = "MoreLife" image = {moreLife} description="Sistema informático para la predicción de escasez sanguínea."/>
-      <TeamCard title = "Activate" image = {activate} description="Activate simula ser un gimnasio para tu cerebro. "/>
-      <TeamCard title = "Artifical Inventory" image = {AII} description="Buscamos evitar quiebres de stock haciendo uso de IA"/>
-      <TeamCard title = "TrAIner" image = {AITrainer} description="Asistente virtual con IA para motivar el ejercicio" />
+      <TeamCard title = "MoreLife" image = {moreLife} description="Sistema informático para la predicción de escasez sanguínea." id={id}/>
+      <TeamCard title = "Activate" image = {activate} description="Activate simula ser un gimnasio para tu cerebro. " id={id}/>
+      <TeamCard title = "Artifical Inventory" image = {AII} description="Buscamos evitar quiebres de stock haciendo uso de IA" id={id}/>
+      <TeamCard title = "TrAIner" image = {AITrainer} description="Asistente virtual con IA para motivar el ejercicio" id={id} />
     </Stack>
     </div>
     <div className='row'>
     <Stack spacing={2} direction='row'  alignItems="center">
-      <TeamCard title = "AllegroTraining" image = {AT} description="Aplicación pensada para practicantes de guitarra y violín"/>
-      <TeamCard title = "BINMO" image = {Binmo} description="Sistema de detección de bullying mediante análisis de video"/>
+      <TeamCard title = "AllegroTraining" image = {AT} description="Aplicación pensada para practicantes de guitarra y violín" id={id}/>
+      <TeamCard title = "BINMO" image = {Binmo} description="Sistema de detección de bullying mediante análisis de video" id={id}/>
     </Stack>
     </div>
     </div>
     <h1 className='project__title'>Categoría Transformación Digital y Social</h1> <div className='team'>
     <div className='row'>
     <Stack spacing={2} direction='row'  alignItems="center">
-      <TeamCard title = "Empaty" image = {EMPATY} description="Aplicación para psicólogos que permite realizar terapia online." />
-      <TeamCard title = "Vinculados" image = {VINCULADOS} description="Permite conectar las necesidades sociales con las instituciones."/>
-      <TeamCard title = "PuduPal" image = {PUDUPAL} description="  Asistente interactivo para web orientado a adultos mayores."/>
-      <TeamCard title = "PreuAPP" image = {PreuAPP} description="Preparando la PAES con desafíos de corta duración y gamificación." />    </Stack>
+      <TeamCard title = "Empaty" image = {EMPATY} description="Aplicación para psicólogos que permite realizar terapia online." id={id} />
+      <TeamCard title = "Vinculados" image = {VINCULADOS} description="Permite conectar las necesidades sociales con las instituciones." id={id}/>
+      <TeamCard title = "PuduPal" image = {PUDUPAL} description="  Asistente interactivo para web orientado a adultos mayores." id={id}/>
+      <TeamCard title = "PreuAPP" image = {PreuAPP} description="Preparando la PAES con desafíos de corta duración y gamificación." id={id} />    </Stack>
       </div>
       <div className='row'>
-      <TeamCard title = "Dacot" image = {DACOT} description="Plataforma web enfocada en la transformación digital de la CoT"/>
+      <TeamCard title = "Dacot" image = {DACOT} description="Plataforma web enfocada en la transformación digital de la CoT" id={id}/>
 
     </div>
       </div>  

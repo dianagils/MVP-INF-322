@@ -32,6 +32,7 @@ export default function MisionVision({title, subheader}) {
         subheader={subheader}
         fontSize="20px"
       />
+      
     </Card>
     </ThemeProvider>
   );

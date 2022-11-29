@@ -24,7 +24,10 @@ export const HomePage3 = () => {
     <div className='navbar'>
     <ResponsiveAppBar id={id}/>
     <div className='page'>
+<<<<<<< HEAD
     <PersistentDrawerRight/>
+=======
+>>>>>>> 74407ed13a9807655583a2a0e28343677db8d746
       <h1 className='page__title'>Bienvenido a la Feria de Software Virtual 2023</h1>
       <h2>Revisa los proyectos de esta edición y visita sus stands virtuales</h2>
     </div>
