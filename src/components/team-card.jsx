@@ -44,7 +44,7 @@ export default function TeamCard({title, image, description}) {
         </Typography>
       </CardContent>
       <CardActions disableSpacing>
-        <Button  variant='contained' aria-label="Visitar">
+        <Button  variant='contained' aria-label="Visitar" href="/stand">
           VISITAR
         </Button>
       </CardActions>
